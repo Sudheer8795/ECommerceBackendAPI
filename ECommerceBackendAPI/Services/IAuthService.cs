@@ -1,0 +1,9 @@
+using ECommerce.Api.DTOs;
+
+namespace ECommerce.Api.Services;
+
+public interface IAuthService
+{
+    Task<AuthResponseDto> RegisterAsync(RegisterDto dto);
+    Task<AuthResponseDto> LoginAsync(LoginDto dto);
+}
