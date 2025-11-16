@@ -40,7 +40,7 @@ builder.Services.AddControllers();
 
 // JWT
 var jwt = builder.Configuration.GetSection("Jwt");
-var key = Encoding.UTF8.GetBytes(jwt["Key"]);
+var key = Encoding.UTF8.GetBytes(jwt["Key"] ?? string.Empty);
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

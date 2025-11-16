@@ -10,7 +10,10 @@ namespace ECommerce.Api.Controllers.Admin;
 public class AdminOrdersController : ControllerBase
 {
     private readonly IOrderRepository _orders;
-    public AdminOrdersController(IOrderRepository orders) => _orders = orders;
+    public AdminOrdersController(IOrderRepository orders)
+    {
+        _orders = orders;
+    }
 
     [HttpGet]
     public async Task<IActionResult> GetAll()
