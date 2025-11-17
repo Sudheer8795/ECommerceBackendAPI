@@ -27,6 +27,8 @@ Follow these steps to run the project locally:
   dotnet tool install --global dotnet-ef --version 8.0.4
   
   dotnet ef database update
+  
+  After above command database,all tables and data created.
 
 Default admin login:
   "Email": "admin@store.com",
